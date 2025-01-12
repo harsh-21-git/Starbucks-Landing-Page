@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,300;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: 800;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .text-box {
+    position: relative;
+    max-width: 600px;
+}
+
+.container .text-box h2 {
+    color: #333;
+    font-size: 3.5em;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.container .text-box h2 span {
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.container .text-box p {
+    color: #333;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.container .text-box a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container .text-box a:hover {
+    background: #015a34;
+}
+
+.container .img-box {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.container .img-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 80px;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.social li a:hover {
+    transform: scale(0.7);
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1920px) {
+    section {
+        padding: 80px 100px;
+    }
+
+    header {
+        padding: 20px 80px;
+    }
+
+    .container .text-box h2 {
+        font-size: 3.8em;
+    }
+
+    .container .img-box {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    section {
+        padding: 80px 50px;
+    }
+
+    .container .text-box h2 {
+        font-size: 3.2em;
+    }
+
+    .container .img-box {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .container .text-box {
+        max-width: 100%;
+    }
+
+    .container .text-box h2 {
+        font-size: 2.5em;
+    }
+
+    .container .img-box {
+        width: 70%;
+        margin: 20px auto;
+        padding-right: 0;
+    }
+
+    header ul li a {
+        margin-left: 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container .text-box h2 {
+        font-size: 2em;
+    }
+
+    .container .text-box a {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    .container .img-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header ul li a {
+        margin-left: 10px;
+        font-size: 0.8em;
+    }
+
+    .container .text-box h2 {
+        font-size: 1.8em;
+    }
+
+    .container .text-box a {
+        font-size: 0.8em;
+    }
+}
